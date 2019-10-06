@@ -25,16 +25,25 @@ Participants will be recruited on Amazon Mechanical Turk (exact sample size to b
 
 Measures for each face image will include:
 -Perceived race
+
 -Perceived competence
+
 -Perceived degree of hardworking
+
 -Perceived responsibility
+
 -Perceived ability to use food stamps/cash assistance responsibly
+
 -Supoort for giving person food stamps/cash assistance
 
 General measures will include:
+
 -Demographics (age, gender, race)
+
 -Attitudes toward welfare
+
 -Perceptions of increasing diversity in America
+
 -Perceptions of welfare as being for racial minorities
 
 ###Anticipated challenges
@@ -42,6 +51,7 @@ Potential challenges could include acquiring the images from the original author
 
 ###Links
 Project Repository: https://github.com/psych251/brown-iannuzzi2016
+
 Original Paper: https://github.com/psych251/brown-iannuzzi2016/blob/master/original_paper/Brown-Iannuzzi%20et%20al%202016.pdf 
 
 
