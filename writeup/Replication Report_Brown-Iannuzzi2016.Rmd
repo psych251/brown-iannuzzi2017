@@ -24,6 +24,7 @@ In the first two studies in the paper (Brown-Iannuzzi, Dotsch, Cooley, & Payne, 
 Participants will be recruited on Amazon Mechanical Turk (exact sample size to be determined by power analysis) to complete the study via Qualtrics. Face images used in Study 3 (2 representative images and 4 filler images) will be collected from the original authors for use. 
 
 Measures for each face image will include:
+
 -Perceived race
 
 -Perceived competence
@@ -35,6 +36,7 @@ Measures for each face image will include:
 -Perceived ability to use food stamps/cash assistance responsibly
 
 -Supoort for giving person food stamps/cash assistance
+
 
 General measures will include:
 
