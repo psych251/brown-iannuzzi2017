@@ -1,5 +1,5 @@
 ---
-title: "Replication of Study 3 by Brown-Iannuzzi et al. (2016, Psychological Science)"
+title: "Replication of Study 3 by Brown-Iannuzzi et al. (2017, Psychological Science)"
 author: "Maggie Perry (mperry3@stanford.edu)"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
@@ -18,7 +18,7 @@ output:
 This study provides evidence of a correlation between racially biased mental images of welfare recipients and support for welfare distribution. This is an important finding in the context of understanding how racial bias impacts institutional decisions, which I plan to explore throughout my research program. Through this replication, I will gain more understanding of how implicit associations about race can affect one's attitudes toward various laws and policies. 
 
 ###Description of Paper:
-In the first two studies in the paper (Brown-Iannuzzi, Dotsch, Cooley, & Payne, 2016), participants selected welfare recipients and non-welfare recipients from a series of face images, and their selections were combined to create an average welfare-recipient and average non-welfare-recipient face. A separate sample rated the average welfare-recipient as appearing significantly more African-American than the non-welfare-recipient. I plan to replicate Study 3, in which participants were significantly less likely to award welfare benefits to the average welfare-recipient (more African-American appearing) image. 
+In the first two studies in the paper (Brown-Iannuzzi, Dotsch, Cooley, & Payne, 2017), participants selected welfare recipients and non-welfare recipients from a series of face images, and their selections were combined to create an average welfare-recipient and average non-welfare-recipient face. A separate sample rated the average welfare-recipient as appearing significantly more African-American than the non-welfare-recipient. I plan to replicate Study 3, in which participants were significantly less likely to award welfare benefits to the average welfare-recipient (more African-American appearing) image. 
 
 ###Description of the stimuli and procedures that will be required to conduct this experiment:
 Participants will be recruited on Amazon Mechanical Turk (exact sample size to be determined by power analysis) to complete the study via Qualtrics. Face images used in Study 3 (2 representative images and 4 filler images) will be collected from the original authors for use. 
@@ -52,9 +52,9 @@ General measures will include:
 Potential challenges could include acquiring the images from the original authors, and finding alternative images if unable to get the original images. 
 
 ###Links
-Project Repository: https://github.com/psych251/brown-iannuzzi2016
+Project Repository: https://github.com/psych251/brown-iannuzzi2017
 
-Original Paper: https://github.com/psych251/brown-iannuzzi2016/blob/master/original_paper/Brown-Iannuzzi%20et%20al%202016.pdf 
+Original Paper: https://github.com/psych251/brown-iannuzzi2017/blob/master/original_paper/Brown-Iannuzzi%20et%20al%202017.pdf 
 
 
 ##Methods
