@@ -14,7 +14,31 @@ output:
 
 ##Introduction
 
-[No abstract is needed.]  Each replication project will have a straightforward, no frills report of the study and results.  These reports will be publicly available as supplementary material for the aggregate report(s) of the project as a whole.  Also, to maximize project integrity, the intro and methods will be written and critiqued in advance of data collection.  Introductions can be just 1-2 paragraphs clarifying the main idea of the original study, the target finding for replication, and any other essential information.  It will NOT have a literature review -- that is in the original publication. You can write both the introduction and the methods in past tense.  
+###Justification for Choice of Experiment:
+This study provides evidence of a correlation between racially biased mental images of welfare recipients and support for welfare distribution. This is an important finding in the context of understanding how racial bias impacts institutional decisions, which I plan to explore throughout my research program. Through this replication, I will gain more understanding of how implicit associations about race can affect one's attitudes toward various laws and policies. 
+
+###Description of Paper:
+In the first two studies in the paper (Brown-Iannuzzi, Dotsch, Cooley, & Payne, 2016), participants selected welfare recipients and non-welfare recipients from a series of face images, and their selections were combined to create an average welfare-recipient and average non-welfare-recipient face. A separate sample rated the average welfare-recipient as appearing significantly more African-American than the non-welfare-recipient. I plan to replicate Study 3, in which participants were significantly less likely to award welfare benefits to the average welfare-recipient (more African-American appearing) image. 
+
+###Description of the stimuli and procedures that will be required to conduct this experiment:
+Participants will be recruited on Amazon Mechanical Turk (exact sample size to be determined by power analysis) to complete the study via Qualtrics. Face images used in Study 3 (2 representative images and 4 filler images) will be collected from the original authors for use. 
+
+Measures for each face image will include:
+-Perceived race
+-Perceived competence
+-Perceived degree of hardworking
+-Perceived responsibility
+-Perceived ability to use food stamps/cash assistance responsibly
+-Supoort for giving person food stamps/cash assistance
+
+General measures will include:
+-Demographics (age, gender, race)
+-Attitudes toward welfare
+-Perceptions of increasing diversity in America
+-Perceptions of welfare as being for racial minorities
+
+###Anticipated challenges
+Potential challenges could include acquiring the images from the original authors, and finding alternative images if unable to get the original images. 
 
 
 ##Methods
