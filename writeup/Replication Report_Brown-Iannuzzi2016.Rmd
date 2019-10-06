@@ -40,6 +40,10 @@ General measures will include:
 ###Anticipated challenges
 Potential challenges could include acquiring the images from the original authors, and finding alternative images if unable to get the original images. 
 
+###Links
+Project Repository: https://github.com/psych251/brown-iannuzzi2016
+Original Paper: https://github.com/psych251/brown-iannuzzi2016/blob/master/original_paper/Brown-Iannuzzi%20et%20al%202016.pdf 
+
 
 ##Methods
 
