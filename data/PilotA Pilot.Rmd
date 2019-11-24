@@ -1,0 +1,102 @@
+---
+title: "251 Project Analysis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+```{r}
+####Load Relevant Libraries and Functions
+library(tidyverse)
+library(knitr)
+
+####Import data
+padata <- read.csv("PilotAData.csv")
+View(padata)
+padata <- padata %>% 
+  select(starts_with("W"),
+         starts_with("NW"))
+padata <- padata %>%
+  select(-White_F1, -White_F2, -White_F3, -White_F4)
+padata <- padata %>%
+  filter(W_White == 1 | W_White == 2) %>% 
+  mutate(pID = row_number())
+
+#### Data exclusion / filtering
+#There are no exclusion criteria.
+
+#### Prepare data for analysis - create columns etc.
+padata_long <- padata %>%
+  gather(measure, rating, W_White:NW_CashS)
+View(padata_long)
+padata_long$rating <- as.numeric(padata_long$rating)
+padata_long <- padata_long %>%
+  separate(measure, 
+           c("image", "measure"))
+
+padata_spread <- padata_long %>%
+  spread(measure, rating)
+
+#### Plot means
+padata_means <- padata_spread %>% 
+  group_by(image) %>%
+  summarise(mean_CashR = mean(CashR),
+            mean_CashS = mean(CashS),
+            mean_FoodR = mean(FoodR),
+            mean_FoodS = mean(FoodS),
+            mean_Hardwork = mean(Hardwork),
+            mean_Smart = mean(Smart),
+            mean_Response = mean(Response),
+            mean_White = mean(White))
+padata_means <- padata_means %>%
+  gather(measure, mean, mean_CashR:mean_White)
+plot <- padata_means %>%
+  ggplot(aes(x = measure, 
+      y = mean,
+      fill = image)) +
+      theme_bw() +
+      theme(axis.title = element_text(face = "bold") +
+      geom_bar())
+print(plot)
+
+padata_means$image <- as.factor(padata_means$image)
+ggplot(padata_means) + 
+    geom_bar(aes(x = measure, y = mean, fill = image), position = position_dodge(preserve = 'single'), stat = 'identity') +
+  scale_x_discrete(labels=c("mean_CashR" = "Cash Responsibility", "mean_CashS" = "Cash Support",
+                              "mean_FoodR" = "Food Responsibility", "mean_FoodS" = "Food Support", "mean_Hardwork" = "Hardworking", "mean_Response" = "Responsible", "mean_Smart" = "Smart", "mean_White" = "White")) + 
+  theme(axis.text.x = element_text(angle = 45))
+```
+
+
+```{r}
+
+#run MANOVA
+rating <- cbind(padata_spread$CashR, padata_spread$CashS, padata_spread$FoodR, padata_spread$FoodS, padata_spread$Hardwork, padata_spread$Response, padata_spread$Smart, padata_spread$White)
+
+model <- manova(rating~image, data=padata_spread)
+summary(model, tol=0)
+
+```

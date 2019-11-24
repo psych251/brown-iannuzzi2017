@@ -11,7 +11,7 @@
 
 <meta name="author" content="Maggie Perry (mperry3@stanford.edu)" />
 
-<meta name="date" content="2019-10-05" />
+<meta name="date" content="2019-10-27" />
 
 <title>Replication of Study 3 by Brown-Iannuzzi et al. (2017, Psychological Science)</title>
 
@@ -295,7 +295,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Replication of Study 3 by Brown-Iannuzzi et al. (2017, Psychological Science)</h1>
 <h4 class="author">Maggie Perry (<a href="mailto:mperry3@stanford.edu">mperry3@stanford.edu</a>)</h4>
-<h4 class="date">October 05, 2019</h4>
+<h4 class="date">October 27, 2019</h4>
 
 </div>
 
@@ -320,7 +320,7 @@ div.tocify {
 <p>-Perceived degree of hardworking</p>
 <p>-Perceived responsibility</p>
 <p>-Perceived ability to use food stamps/cash assistance responsibly</p>
-<p>-Supoort for giving person food stamps/cash assistance</p>
+<p>-Support for giving person food stamps/cash assistance</p>
 <p>General measures will include:</p>
 <p>-Demographics (age, gender, race)</p>
 <p>-Attitudes toward welfare</p>
@@ -335,6 +335,7 @@ div.tocify {
 <h3>Links</h3>
 <p>Project Repository: <a href="https://github.com/psych251/brown-iannuzzi2017" class="uri">https://github.com/psych251/brown-iannuzzi2017</a></p>
 <p>Original Paper: <a href="https://github.com/psych251/brown-iannuzzi2017/blob/master/original_paper/Brown-Iannuzzi%20et%20al%202017.pdf">https://github.com/psych251/brown-iannuzzi2017/blob/master/original_paper/Brown-Iannuzzi%20et%20al%202017.pdf</a></p>
+<p>Qualtrics Paradigm: <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_7NWiDNodo4C7rSJ" class="uri">https://stanforduniversity.qualtrics.com/jfe/form/SV_7NWiDNodo4C7rSJ</a></p>
 </div>
 </div>
 <div id="methods" class="section level2">
@@ -345,24 +346,31 @@ div.tocify {
 </div>
 <div id="planned-sample" class="section level3">
 <h3>Planned Sample</h3>
-<p>Planned sample size and/or termination rule, sampling frame, known demographics if any, preselection rules if any.</p>
+<p>Sample size will be determined by power analysis the week of 10/20. The original study sampled 229 participants on Amazon Mechanical Turk, although the power analysis done by the orignal authors suggested 90 participants were needed to detect a small effect size at 80% power. Subsequently larger effect sizes were found, thus a sample smaller than 90 may be adequate depending on which effects I aim to replicate. The study will be terminated on mTurk once I have collected the number of participants specified by the forthcoming power analysis. There are no demographic quotas or preselection rules.</p>
 </div>
 <div id="materials" class="section level3">
 <h3>Materials</h3>
-<p>All materials - can quote directly from original article - just put the text in quotations and note that this was followed precisely. Or, quote directly and just point out exceptions to what was described in the original article.</p>
+<p>“Participants were told that they would see a series of “fuzzy” images of real people. The images presented were the average welfare-recipient and non-welfare-recipient images generated in Study 2 and four filler images (the same filler images used in Study 1 and 2), which were included so that the comparison between the two images of interest would not be salient.” Note: the filler images used in this replication will be different from those used in the original study; this should not affect results.</p>
 </div>
 <div id="procedure" class="section level3">
 <h3>Procedure</h3>
-<p>Can quote directly from original article - just put the text in quotations and note that this was followed precisely. Or, quote directly and just point out exceptions to what was described in the original article.</p>
+<p>“Participants were told that they would see a series of “fuzzy” images of real people. The blurry nature of the images was explained by telling participants that the images looked distorted because they were composites of photos of people who had applied for government welfare programs. Participants were told that some of the applicants turned out to be responsible recipients of welfare benefits, whereas others were irresponsible recipients of the benefits. Then, participants were asked to make a series of judgments about each image. They were given no indication whether each image was supposedly a composite of responsible or irresponsible welfare recipients.”</p>
+<p>“Participants rated each image on perceived race (1 = definitely African American, 6 = definitely White American). We measured perceived deservingness by asking participants to rate each image on the degree to which the pictured person seemed competent (1 = extremely unintelligent, 6 = extremely intelligent) and hardworking (1 = extremely lazy, 6 = extremely hardworking), the extent to which the pictured person seemed responsible (1 = extremely irresponsible, 6 = extremely responsible), and the extent to which they believed the pictured person would use food stamps responsibly (1 = definitely would not use responsibly, 6 = definitely would use responsibly) and would use cash assistance responsibly (1 = definitely would not use responsibly, 6 = definitely would use responsibly). Finally, participants were asked how much they would support giving the pictured person food stamps (1 = completely unsupportive, 6 = completely supportive) and cash assistance (1 = completely unsupportive, 6 = completely supportive). Participants also answered demographic questions, including questions about their gender, age, and race-ethnicity.”</p>
 </div>
 <div id="analysis-plan" class="section level3">
 <h3>Analysis Plan</h3>
-<p>Can also quote directly, though it is less often spelled out effectively for an analysis strategy section. The key is to report an analysis strategy that is as close to the original - data cleaning rules, data exclusion rules, covariates, etc. - as possible.</p>
-<p><strong>Clarify key analysis of interest here</strong> You can also pre-specify additional analyses you plan to do.</p>
+<p>A one-way MANOVA will be calculated to determine the effect of the welfare-recipient and non-welfare-recipient images on each of the following ratings:</p>
+<p>-Responsibility (in general)</p>
+<p>-Responsiblity with cash assistance</p>
+<p>-Responsbility with food stamps</p>
+<p>-Supportiveness of giving cash assistance</p>
+<p>-Supportiveness of giving food stamps</p>
+<p>The one-way MANOVA will account for the multiple dependent variables. Then, assuming significance, a one-way ANOVA and partial eta-squared statistic will be calculated for each of the above ratings to measure individual effect sizes, as done in the original study.</p>
+<p>Note: Depending on the determined sample size, we may only analyze the measures of responsibility, as these were bigger effect sizes which could be replicated with a smaller sample.</p>
 </div>
 <div id="differences-from-original-study" class="section level3">
 <h3>Differences from Original Study</h3>
-<p>Explicitly describe known differences in sample, setting, procedure, and analysis plan from original study. The goal, of course, is to minimize those differences, but differences will inevitably occur. Also, note whether such differences are anticipated to make a difference based on claims in the original article or subsequent published research on the conditions for obtaining the effect.</p>
+<p>The replication will likely use a smaller sample than the original study, though will have enough power to detect the specified effects based on the power analysis. The replication will use the same materials and procedure, with the exception of the filler images, which should not have an effect on the results since they will not be compared to the critical images.</p>
 </div>
 <div id="methods-addendum-post-data-collection" class="section level3">
 <h3>Methods Addendum (Post Data Collection)</h3>
@@ -381,12 +389,76 @@ div.tocify {
 <h2>Results</h2>
 <div id="data-preparation" class="section level3">
 <h3>Data preparation</h3>
-<p>Data preparation following the analysis plan.</p>
+<pre class="r"><code>####Load Relevant Libraries and Functions
+library(tidyverse)
+library(knitr)
+
+####Import data
+padata &lt;- read.csv(&quot;PilotAData.csv&quot;)
+View(padata)
+padata &lt;- padata %&gt;% 
+  select(starts_with(&quot;W&quot;),
+         starts_with(&quot;NW&quot;))
+padata &lt;- padata %&gt;%
+  select(-White_F1, -White_F2, -White_F3, -White_F4)
+padata &lt;- padata %&gt;%
+  filter(W_White == 1 | W_White == 2)
+
+#### Data exclusion / filtering
+#There are no exclusion criteria.
+
+#### Prepare data for analysis - create columns etc.
+padata_long &lt;- padata %&gt;%
+  gather(measure, rating, W_White:NW_CashS)
+View(padata_long)
+padata_long$rating &lt;- as.numeric(padata_long$rating)
+padata_long &lt;- padata_long %&gt;%
+  separate(measure, 
+           c(&quot;image&quot;, &quot;measure&quot;))
+
+padata_long &lt;- padata_long %&gt;% 
+  mutate(i = row_number())
+padata_spread &lt;- padata_long %&gt;%
+  spread(measure, rating)
+padata_spread &lt;- padata_spread %&gt;%
+  select(-i)</code></pre>
 </div>
 <div id="confirmatory-analysis" class="section level3">
 <h3>Confirmatory analysis</h3>
-<p>The analyses as specified in the analysis plan.</p>
+<div id="one-way-manova" class="section level4">
+<h4>One-way MANOVA</h4>
+<pre class="r"><code>measures_combined &lt;- cbind(padata_spread$response, padata_spread$cashR, padata_spread$foodR, padata_spread$cashS, padata_spread$foodS) #combining DVs into single column
+pamodel &lt;- manova(measures_combined ~ image, data = padata_spread) #run MANOVA
+summary(pamodel) #view MANOVA to determine significance</code></pre>
+</div>
+<div id="one-way-anova-partial-eta-squared" class="section level4">
+<h4>One-way ANOVA &amp; Partial eta-squared</h4>
+<pre class="r"><code>#DV 1: Responsibility (general)
+response.aov &lt;- aov(response ~ image, data = wdata)
+summary(response.aov)
+etaSquared(response.aov)
+
+#DV 2: Responsbility with cash assistance
+cashR.aov &lt;- aov(cashR ~ image, data = wdata)
+summary(cashR.aov)
+etaSquared(cashR.aov)
+
+#DV 3: Responsbility with food stamps
+foodR.aov &lt;- aov(foodR ~ image, data = wdata)
+summary(foodR.aov)
+etaSquared(foodR.aov)
+
+#DV 4: Support for giving cash assistance
+cashS.aov &lt;- aov(cashS ~ image, data = wdata)
+summary(cashS.aov)
+etaSquared(cashS.aov)
+
+#DV 5: Support for giving food stamps
+foodS.aov &lt;- aov(foodS ~ image, data = wdata)
+summary(foodS.aov)
+etaSquared(foodS.aov)</code></pre>
 <p><em>Side-by-side graph with original graph is ideal here</em></p>
+</div>
 </div>
 <div id="exploratory-analyses" class="section level3">
 <h3>Exploratory analyses</h3>

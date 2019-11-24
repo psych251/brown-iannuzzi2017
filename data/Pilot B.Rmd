@@ -1,7 +1,7 @@
 ---
 title: "Replication of Study 3 by Brown-Iannuzzi et al. (2017, Psychological Science)"
 author: "Maggie Perry (mperry3@stanford.edu)"
-date: 'November 24, 2019'
+date: 'October 27, 2019'
 output:
   html_document:
     toc: yes
@@ -43,7 +43,7 @@ Measures for each face image will include:
 
 General measures will include:
 
--Demographics (age, gender, race, income, education, political affiliation)
+-Demographics (age, gender, race, education, political affiliation, income)
 
 
 ###Anticipated challenges
@@ -62,17 +62,11 @@ Qualtrics Paradigm: https://stanforduniversity.qualtrics.com/jfe/form/SV_7NWiDNo
 ###Power Analysis
 
 The original effect sizes for each of the 5 DVs of interest were as follows:
-
 Responsible: .31
-
 Responsible with Cash Assistance: .19
-
 Responsible with Food Stamps: .22
-
 Supportive of giving Cash Assistance: .13
-
 Supportive of giving Food Stamps: .13
-
 
 Power analysis in G*Power reveals that to replicate the smallest effect (.13) at 80% power, we need a sample size of n=77, and to replicaate the largest effect (.31) we need a sample of n=29. Based on funding constraints, we will collect a sample of 29 participants, and our key DV of interest will be that with the biggest effect size: responsibility. 
 
