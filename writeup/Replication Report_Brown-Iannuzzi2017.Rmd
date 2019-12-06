@@ -15,15 +15,15 @@ output:
 
 <!-- Replication reports should all use this template to standardize reporting across projects.  These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
 
-##Introduction
+## Introduction
 
-###Justification for Choice of Experiment:
+### Justification for Choice of Experiment:
 This study provides evidence of a correlation between racially biased mental images of welfare recipients and support for welfare distribution. This is an important finding in the context of understanding how racial bias impacts institutional decisions, which I plan to explore throughout my research program. Through this replication, I will gain more understanding of how implicit associations about race can affect one's attitudes toward various laws and policies. 
 
-###Description of Paper:
+### Description of Paper:
 In the first two studies in the paper (Brown-Iannuzzi, Dotsch, Cooley, & Payne, 2017), participants selected welfare recipients and non-welfare recipients from a series of face images, and their selections were combined to create an average welfare-recipient and average non-welfare-recipient face. A separate sample rated the average welfare-recipient as appearing significantly more African-American than the non-welfare-recipient. I plan to replicate Study 3, in which participants were significantly less likely to award welfare benefits to the average welfare-recipient (more African-American appearing) image. 
 
-###Description of the stimuli and procedures that will be required to conduct this experiment:
+### Description of the stimuli and procedures that will be required to conduct this experiment:
 Participants will be recruited on Amazon Mechanical Turk (exact sample size to be determined by power analysis) to complete the study via Qualtrics. Face images used in Study 3 (2 representative images and 4 filler images) will be collected from the original authors for use. 
 
 Measures for each face image will include:
@@ -46,10 +46,10 @@ General measures will include:
 -Demographics (age, gender, race, income, education, political affiliation)
 
 
-###Anticipated challenges
+### Anticipated challenges
 Potential challenges could include acquiring the images from the original authors, and finding alternative images if unable to get the original images. 
 
-###Links
+### Links
 Project Repository: https://github.com/psych251/brown-iannuzzi2017
 
 Original Paper: https://github.com/psych251/brown-iannuzzi2017/blob/master/original_paper/Brown-Iannuzzi%20et%20al%202017.pdf 
@@ -57,11 +57,11 @@ Original Paper: https://github.com/psych251/brown-iannuzzi2017/blob/master/origi
 Qualtrics Paradigm: https://stanforduniversity.qualtrics.com/jfe/form/SV_7NWiDNodo4C7rSJ 
 
 
-##Methods
+## Methods
 
-###Power Analysis
+### Power Analysis
 
-The original effect sizes for each of the 5 DVs of interest were as follows:
+The hypotheses are that participants would rate the average welfare recipient image as less responsible in general, less responsible with cash assistance/food stamps, and would be less supportive of giving cash assistance/food stamps to this person than the average non-welfare recipient. These hypotheses were confirmed in the original study. The original effect sizes for each of the 5 DVs of interest were as follows:
 
 Responsible: .31
 
@@ -74,27 +74,28 @@ Supportive of giving Cash Assistance: .13
 Supportive of giving Food Stamps: .13
 
 
-Power analysis in G*Power reveals that to replicate the smallest effect (.13) at 80% power, we need a sample size of n=77, and to replicaate the largest effect (.31) we need a sample of n=29. Based on funding constraints, we will collect a sample of 29 participants, and our key DV of interest will be that with the biggest effect size: responsibility. 
+Power analysis in G*Power reveals that to replicate the smallest effect (difference of average support for cash assistance/food stamps between two images = .13) at 80% power, we need a sample size of n=77, and to replicaate the largest effect (difference of mean responsiblity rating between the two images = .31) we need a sample of n=29. Based on funding constraints, we will collect a sample of 29 participants, and our key DV of interest will be that with the biggest effect size: the difference in mean ratings of responsibility for the welfare and non-welfare images. 
 
-###Planned Sample
+
+### Planned Sample
 
 The original study sampled 229 participants on Amazon Mechanical Turk, although the power analysis done by the orignal authors suggested 90 participants were needed to detect a small effect size at 80% power. Subsequently larger effect sizes were found, thus we are able to collect a smaller sample to replicate larger effects. Our sample size will be based on the effect size of the "responsible" DV, which we will aim to replicate with 29 participants (based on power analysis). The study will be terminated on mTurk once I have collected full data from 29 participants. There are no demographic quotas or preselection rules, but if participants fail the attention check I will analyze the data with and without those participants to determine how this affects the results. 
 
 
-###Materials
+### Materials
 
 "Participants were told that they would see a series of “fuzzy” images of real people. The images presented were the average welfare-recipient and non-welfare-recipient images generated in Study 2 and four filler images (the same filler images used in Study 1 and 2), which were included so that the comparison between the two images of interest would not be salient."
 Note: the filler images used in this replication will be different from those used in the original study; this should not affect results.
 
 
-###Procedure	
+### Procedure	
 
 "Participants were told that they would see a series of “fuzzy” images of real people. The blurry nature of the images was explained by telling participants that the images looked distorted because they were composites of photos of people who had applied for government welfare programs. Participants were told that some of the applicants turned out to be responsible recipients of welfare benefits, whereas others were irresponsible recipients of the benefits. Then, participants were asked to make a series of judgments about each image. They were given no indication whether each image was supposedly a composite of responsible or irresponsible welfare recipients."
 
 "Participants rated each image on perceived race (1 = definitely African American, 6 = definitely White American). We measured perceived deservingness by asking participants to rate each image on the degree to which the pictured person seemed competent (1 = extremely unintelligent, 6 = extremely intelligent) and hardworking (1 = extremely lazy, 6 = extremely hardworking), the extent to which the pictured person seemed responsible (1 = extremely irresponsible, 6 = extremely responsible), and the extent to which they believed the pictured person would use food stamps responsibly (1 = definitely would not use responsibly, 6 = definitely would use responsibly) and would use cash assistance responsibly (1 = definitely would not use responsibly, 6 = definitely would use responsibly). Finally, participants were asked how much they would support giving the pictured person food stamps (1 = completely unsupportive, 6 = completely supportive) and cash assistance (1 = completely unsupportive, 6 = completely supportive). Participants also answered demographic questions, including questions about their gender, age, and race-ethnicity."
 
 
-###Analysis Plan
+### Analysis Plan
 
 A one-way MANOVA will be calculated to determine the effect of the welfare-recipient and non-welfare-recipient images on each of the following ratings:
 
@@ -108,12 +109,12 @@ A one-way MANOVA will be calculated to determine the effect of the welfare-recip
 
 -Supportiveness of giving food stamps
 
-The one-way MANOVA will account for the multiple dependent variables. Then, assuming significance, a one-way ANOVA and partial eta-squared statistic will be calculated for each of the above ratings to measure individual effect sizes, as done in the original study.
+The one-way MANOVA will account for the multiple dependent variables. Then, assuming significance, a one-way ANOVA and partial eta-squared statistic will be calculated for each of the above ratings to measure individual effect sizes, as done in the original study. The key statistic is the F statistic and p value for the key variable of interest, responsibility.
 
 Note: Given the determined sample size, the key variable of interest will be responsibility, but I will analyze the other DVs as well. 
 
 
-###Differences from Original Study
+### Differences from Original Study
 
 The replication will use a smaller sample than the original study, though should have enough power to detect the specified effect based on the power analysis. The replication will use the same materials and procedure, with the exception of the filler images, which should not have an effect on the results since they will not be compared to the critical images.
 
@@ -128,12 +129,12 @@ You can comment this section out prior to final report with data collection.
   Any differences from what was described as the original plan, or “none”.
 
 
-##Results
+## Results
 
 
 ### Data preparation
 
-```{r eval=FALSE}
+```{r}
 ####Load Relevant Libraries and Functions
 library(tidyverse)
 library(knitr)
@@ -156,6 +157,8 @@ padata <- padata %>%
   select(-White_F1, -White_F2, -White_F3, -White_F4)
 
 #### Prepare data for analysis - create columns etc.
+padata <- padata %>%
+  mutate(subid = row_number())
 padata_long <- padata %>%
   gather(measure, rating, W_White:NW_CashS)
 View(padata_long)
@@ -164,28 +167,25 @@ padata_long <- padata_long %>%
   separate(measure, 
            c("image", "measure"))
 
-padata_long <- padata_long %>% 
-  mutate(i = row_number())
 padata_spread <- padata_long %>%
   spread(measure, rating)
-padata_spread <- padata_spread %>%
-  select(-i)
 View(padata_spread)
+padata_spread$image <- as.factor(padata_spread$image)
 
 ```
 
 ### Confirmatory analysis
 
-####One-way MANOVA
-```{r eval=FALSE}
+#### One-way MANOVA
+```{r}
 measures_combined <- cbind(padata_spread$Response, padata_spread$CashR, padata_spread$FoodR, padata_spread$CashS, padata_spread$FoodS) #combining DVs into single column
 pamodel <- manova(measures_combined ~ image, data = padata_spread) #run MANOVA
 summary(pamodel) #view MANOVA to determine significance
 
 ```
 
-####One-way ANOVA & Partial eta-squared
-```{r eval=FALSE}
+#### One-way ANOVA & Partial eta-squared
+```{r}
 #DV 1: Responsibility (general)
 response.aov <- aov(Response ~ image, data = padata_spread)
 summary(response.aov)
@@ -214,7 +214,7 @@ etaSquared(foodS.aov)
 
 *Side-by-side graph with original graph is ideal here*
 
-###Exploratory analyses
+### Exploratory analyses
 
 Any follow-up analyses desired (not required).  
 
