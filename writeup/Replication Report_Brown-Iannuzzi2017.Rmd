@@ -1,7 +1,7 @@
 ---
 title: "Replication of Study 3 by Brown-Iannuzzi et al. (2017, Psychological Science)"
 author: "Maggie Perry (mperry3@stanford.edu)"
-date: 'November 24, 2019'
+date: 'December 11, 2019'
 output:
   html_document:
     toc: yes
@@ -55,6 +55,8 @@ Project Repository: https://github.com/psych251/brown-iannuzzi2017
 Original Paper: https://github.com/psych251/brown-iannuzzi2017/blob/master/original_paper/Brown-Iannuzzi%20et%20al%202017.pdf 
 
 Qualtrics Paradigm: https://stanforduniversity.qualtrics.com/jfe/form/SV_7NWiDNodo4C7rSJ 
+
+Preregistration: https://osf.io/acf5n 
 
 
 ## Methods
@@ -118,31 +120,27 @@ Note: Given the determined sample size, the key variable of interest will be res
 
 The replication will use a smaller sample than the original study, though should have enough power to detect the specified effect based on the power analysis. The replication will use the same materials and procedure, with the exception of the filler images, which should not have an effect on the results since they will not be compared to the critical images.
 
-### Methods Addendum (Post Data Collection)
-
-You can comment this section out prior to final report with data collection.
 
 #### Actual Sample
-  Sample size, demographics, data exclusions based on rules spelled out in analysis plan
+  The sample is 29 MTurk workers in the United States. No exclusions were made based on the predetermined criteria, which required all participants to pass the attention check. The mean age was 33.69. 72.4% of participants identify as male, and 27.6% identify as female. 65.52% of participants were White, 10.34% Black, 10.34% Hispanic, 6.9% Asian, and 6.9% both White and Hispanic. The median income of the sample was $40,000 - $49,999. 
 
 #### Differences from pre-data collection methods plan
-  Any differences from what was described as the original plan, or “none”.
-
+  None
 
 ## Results
-
 
 ### Data preparation
 
 ```{r}
-####Load Relevant Libraries and Functions
+#### Load Relevant Libraries and Functions
 library(tidyverse)
 library(knitr)
 library(qualtRics)
 library(lsr)
+library(psych)
 
-####Import data
-padata <- readSurvey("PilotBData.csv")
+#### Import data
+padata <- readSurvey("FinalData.csv")
 View(padata)
 
 #### Data exclusion / filtering
@@ -150,6 +148,15 @@ padata <- padata %>%
   filter(Finished == 1) %>%
   filter(att_check == 1)
 
+#### Demographics
+mean_age <- mean(padata$Age)
+padata$Gender <- ifelse(padata$Gender == 1, "Male", "Female")
+gender <- table(padata$Gender)
+padata$Race <- ifelse(padata$Race == 1, "White", ifelse(padata$Race == 2, "Hispanic", ifelse(padata$Race == 3, "Black", ifelse(padata$Race == 4, "Native American", ifelse(padata$Race == 5, "Asian", ifelse(padata$Race == 6, "Other", "White and Hispanic"))))))
+race <- table(padata$Race)
+income <- median(padata$Income)
+
+#### Eliminating unnecessary columns
 padata <- padata %>% 
   select(starts_with("W"),
          starts_with("NW"))
@@ -210,20 +217,88 @@ etaSquared(cashS.aov)
 foodS.aov <- aov(FoodS ~ image, data = padata_spread)
 summary(foodS.aov)
 etaSquared(foodS.aov)
+
+#DV 6: Hardworking
+hardwork.aov <- aov(Hardwork ~ image, data = padata_spread)
+summary(hardwork.aov)
+etaSquared(hardwork.aov)
+
+#DV 7: Smart
+smart.aov <- aov(Smart ~ image, data = padata_spread)
+summary(smart.aov)
+etaSquared(smart.aov)
+
+#DV 8: White
+white.aov <- aov(White ~ image, data = padata_spread)
+summary(white.aov)
+etaSquared(white.aov)
+
 ```
 
-*Side-by-side graph with original graph is ideal here*
+```{r}
+#Replicate graph of means
+
+means <- padata_spread %>%
+  group_by(image) %>%
+  summarise(mean_CashR = mean(CashR),
+            mean_CashS = mean(CashS),
+            mean_FoodR = mean(FoodR),
+            mean_FoodS = mean(FoodS),
+            mean_Hardwork = mean(Hardwork),
+            mean_Response = mean(Response),
+            mean_Smart = mean(Smart),
+            mean_White = mean(White))
+means$mean_CashR <- round(means$mean_CashR, digits = 2)
+means <- means %>% 
+  mutate_at(2:9, round, 2)
+
+means_t <- t(means)
+means_t <- as.data.frame(means_t)
+colnames(means_t) <- c("NW", "W")
+means_t = means_t[-1, ]  
+means_t <- means_t[,c(2, 1)]
+means_tbl <- means_t %>%
+  mutate(DV = c("CashR", "CashS", "FoodR", "FoodS", "Hardwork", "Response", "Smart", "White"))
+means_tbl <- means_tbl %>%
+  gather(image, mean, W, NW)
+means_tbl$mean <- as.numeric(as.character(means_tbl$mean))
+
+ggplot(means_tbl, aes(mean, DV)) +
+  geom_point(aes(color=image), size = 3) +
+  theme(axis.text=element_text(size=14, face="bold"),
+        axis.title=element_text(size=14,face="bold"),
+        legend.text = element_text(size=14)) +
+  scale_color_hue(labels = c("Non-Welfare", "Welfare"))
+
+```
+
+![Original Graph](images/original graph.png)
+
+```{r}
+#Table comparing means/effect sizes across original study and replication 
+
+colnames(means_t) <- c("Welfare Rep", "NonWelfare Rep")
+resulttable <- means_t %>%
+  mutate("DV" = c("CashR", "CashS", "FoodR", "FoodS", "Hardworking", "Responsible", "Smart", "White"))    %>% mutate("Welfare Orig" = c(3.53, 3.57, 3.63, 3.81, 3.26, 3.41, 3.08, 1.54)) %>%
+  mutate("NonWelfare Orig" = c(4.29, 4.19, 4.40, 4.36, 4.34, 4.54, 4.56, 5.44)) %>%
+  mutate("Partial Eta Squared Orig" = c(.19, .13, .22, .13, .32, .31, .52, .92)) %>%
+  mutate("Partial Eta Squared Rep" = c(.18, .12, .20, .13, .15, .23, .15, .93))
+
+resulttable <- resulttable[c("DV", "NonWelfare Orig", "NonWelfare Rep", "Welfare Orig", "Welfare Rep", "Partial Eta Squared Orig", "Partial Eta Squared Rep")]
+resulttable
+
+```
+
 
 ### Exploratory analyses
 
-Any follow-up analyses desired (not required).  
+See above for exploratory analyses of other DVs
 
 ## Discussion
 
 ### Summary of Replication Attempt
-
-Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.  
+My replication of Study 3 was a partial success; the effect was replicated for the DV of interest (responsibility), although it was not as large an effect as in the original study. Specifically, the data showed a significant difference in responsbility ratings for the non-welfare and welfare recipient images with a partial eta-squared of .23, smaller than the original partial eta-squared of .31. After completing an ANOVA for responsbility ratings, the F value obtained (16.72) was significant at p < .001 (the F and p values were not reported in the original paper).
 
 ### Commentary
+Further analyses reveal a similar pattern of results for the additional DVs as in the original paper. The replication data show a significant difference in responsbility with cash assistance (partial eta-squared = .18, p < .001) responsbility with food stamps (partial eta-squared = .20, p < .001), support for cash assistance (partial eta-squared = .12, p = .007), support for food stamps (partial eta-squared = .13, p = .005), hardworking (partial eta-squared = .15, p = .002), smart (partial eta-squared = .15, p = .002), and white (partial eta-squared = .93, p < .001). Given that the sample was not large enough to expect to replicate these findings based on their effect sizes in the original paper, this is promising evidence that these effects might be more robust in a larger replication. Additionally, the original authors might suggest that the responsibility effect would be larger in a larger sample, since our sample was much smaller than theirs (n=229). Overall, the pattern of results holds consistent, which is promising evidence for these effects. 
 
-Add open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.  None of these need to be long.
